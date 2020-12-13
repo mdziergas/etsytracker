@@ -13,7 +13,7 @@ transaction_fee = 0.05
 listing_fee = .20
 
 
-review2020 = etu('etsyorders.csv')
+review2020 = etu.Etsy('etsyorders.csv')
 #items purchased
 total_items_sold = review2020.sum_col(6)
 #sums order total
@@ -72,11 +72,11 @@ print('\n  EXPENSES\n')
 print(f'     Cost of Goods Sold: ${cogs:.2f}')
 print(f'     Shipping: ${shipping_expenses}')
 print('    Etsy Expenses')
-print(f'     Total Sold Item Fees: ${total_sold_item_fees}')
+print(f'     Total Sold Item Fees: ${total_sold_item_fees:.2f}')
 print(f'     Additional Listing Fees: ${additional_listing_fee}')
 print(f'     Etsy Marketing Expense: ${etsy_marketing_expense}')
 print(f'     Taxes Remitted: ${total_tax_collected:.2f}')
-print(f'    Total Etsy Expenses: ${total_expenses_tracked_by_etsy}')
+print(f'    Total Etsy Expenses: ${total_expenses_tracked_by_etsy:.2f}')
 print(f'    Total Non-Etsy Expenses: ${total_expenses_outside_etsy:.2f}')
 print(f'  Total Expenses: ${total_expenses:.2f}')
 print(f'  Net Income: ${net_income:.2f}')
